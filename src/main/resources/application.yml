@@ -1,0 +1,24 @@
+server:
+port: 8080
+# D?KKAT
+# ?lk va?lad???n?z Ana parametre sola biti?ik olmal?
+# Ana ba?l?k ile alt ba?l??? ay?rmak i�in bir TAB
+# bo?luk kullan?n? ve �ok dikkatli olun. Ayr?ca
+# girece?iniz de?er :(iki nokta �st �ste) den sonra
+# bo?luk b?rak?larak yaz?lmal?d?r yoksa hataya neden
+# olur ve fark edemezsiniz.
+spring:
+ datasource:
+   driver-class-name: org.postgresql.Driver
+   username: postgres
+   password: root
+   url: jdbc:postgresql://localhost:5432/fullstack
+ jpa:
+   hibernate:
+     ddl-auto: update
+   show-sql: true
+   properties:
+     hibernate:
+       format_sql: true
+
+
