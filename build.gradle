@@ -1,10 +1,10 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '2.7.8'
-	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id 'org.springframework.boot' version '3.0.1'
+	id 'io.spring.dependency-management' version '1.1.0'
 }
 
-group = 'com.muhammet'
+group = 'com.seyda'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
 apply plugin: 'idea'
@@ -36,6 +36,8 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'org.mapstruct:mapstruct:1.5.3.Final'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.5.3.Final'
+	implementation 'javax.persistence:javax.persistence-api:2.2'
+
 }
 
 tasks.named('test') {

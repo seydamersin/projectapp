@@ -1,4 +1,4 @@
-package com.seyda.projectapp.com.seyda.entity;
+package com.seyda.projectapp.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.seyda.projectapp.com.seyda.entity;
+package com.seyda.projectapp.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
@@ -15,8 +15,8 @@ public class Post {
     Long id;
     @ManyToOne(fetch = FetchType.LAZY)//
     @JoinColumn(name = "user_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    @OnDelete(action = OnDeleteAction.CASCADE)// bir user silindiğinde bütün postları silinsin
+    @JsonIgnore // serilization da sorun çıkmasın
     User user;
 
     String title;

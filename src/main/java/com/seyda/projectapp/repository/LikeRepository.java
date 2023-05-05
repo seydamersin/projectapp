@@ -1,6 +1,6 @@
-package com.seyda.projectapp.com.seyda.repository;
+package com.seyda.projectapp.repository;
 
-import com.seyda.projectapp.com.seyda.entity.Like;
+import com.seyda.projectapp.entity.Like;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,21 +1,17 @@
-package com.seyda.projectapp.com.seyda.controller;
+package com.seyda.projectapp.controller;
 
-import com.seyda.projectapp.com.seyda.entity.User;
-import com.seyda.projectapp.com.seyda.repository.UserRepository;
-
-import com.seyda.projectapp.com.seyda.services.UserService;
+import com.seyda.projectapp.entity.User;
+import com.seyda.projectapp.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping("users")
 @RequiredArgsConstructor
-
 public class UserController {
-    private UserService userService;
+    private final UserService userService;
 
 
     @GetMapping
@@ -29,7 +25,7 @@ public class UserController {
     @GetMapping("/{userId}")
     public User getOneUser(@PathVariable Long userId){
         //customexception ekle
-        return userService.getOneUser(userId);
+        return userService.getOneUserById(userId);
 
     }
     @PutMapping("/{userId}")

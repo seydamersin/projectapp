@@ -1,19 +1,21 @@
-package com.seyda.projectapp.com.seyda.services;
+package com.seyda.projectapp.services;
 
-import com.seyda.projectapp.com.seyda.entity.User;
-import com.seyda.projectapp.com.seyda.repository.UserRepository;
+import com.seyda.projectapp.entity.User;
+import com.seyda.projectapp.repository.UserRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
 
 @Service
-
 public class UserService {
-   private UserRepository repository;
+   private final UserRepository repository;
 
    public UserService(UserRepository repository) {
       this.repository = repository;
+   }
+
+   public static void getOnePostUser(Long userId) {
    }
 
    public List<User> getAllUsers() {
@@ -24,7 +26,7 @@ public class UserService {
       return repository.save(newUser);
    }
 
-   public User getOneUser(Long userId) {
+   public User getOneUserById(Long userId) {
       return repository.findById(userId).orElse(null);
    }
 

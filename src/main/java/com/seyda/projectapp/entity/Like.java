@@ -1,4 +1,5 @@
-package com.seyda.projectapp.com.seyda.entity;
+package com.seyda.projectapp.entity;
+
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
